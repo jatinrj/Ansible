@@ -1,0 +1,12 @@
+---
+- name: loop4
+  hosts: localhost
+  tasks:
+    - name: user exists and are in the correct group
+      user:
+        name: "{{ item }}"
+        state: present
+        groups: "{{ item.groups }}"
+      with_items:
+        - { name: 'jatin', groups: 'jatin' }
+        - { name: 'newbie', groups: 'wheel' }

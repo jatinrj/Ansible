@@ -1,0 +1,15 @@
+---
+- name: configure fileservers
+  hosts: legend-worker01
+  tasks:
+    - name: include variable file
+      include_vars: paths.yml
+    - name: create the remote directory
+      file:
+        path: "{{ paths.fileserver }}"
+        state: directory
+        mode: 0775
+      register: result
+    - name: debug the variable
+      debug:
+        var: result

@@ -1,0 +1,11 @@
+---
+- name: variable for users
+  hosts: legend-worker01
+  vars:
+    user: jatin
+    home: /home/jatin
+  tasks:
+    - name: user jatin {{ user }}
+      user:
+        name: '{{ user }}'
+

@@ -1,0 +1,14 @@
+---
+- name: distribution
+  hosts: all
+  vars:
+    distros:
+      - Redhat
+      - CentOS
+      - Ubuntu
+  tasks:
+    - name: distro
+      yum:
+        name:
+          - nmap
+      when: ansible_distribution is in distros

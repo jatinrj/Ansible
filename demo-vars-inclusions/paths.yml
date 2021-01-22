@@ -1,0 +1,4 @@
+---
+paths:
+  fileserver: /home/jatin/Downloads/{{ ansible_fqdn }}
+  dbpath: /home/jatin/Documents/{{ ansible_fqdn }}

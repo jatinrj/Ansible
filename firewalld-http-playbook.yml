@@ -1,0 +1,10 @@
+---
+- name: firewalld permits http service
+  hosts: all
+  tasks:
+    - name: http service permits
+      firewalld:
+        service: http
+        permanent: true
+        state: enabled
+        immediate: yes

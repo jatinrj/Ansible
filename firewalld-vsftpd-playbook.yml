@@ -1,0 +1,10 @@
+---
+- name: firewalld permits vsftpd service
+  hosts: all
+  tasks:
+    - name: vsftpd service permits
+      firewalld:
+        port: ftp
+        permanent: true
+        state: enabled
+        immediate: yes

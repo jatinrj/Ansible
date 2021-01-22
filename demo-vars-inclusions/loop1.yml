@@ -1,0 +1,12 @@
+---
+- name: loop1
+  hosts: all
+  tasks:
+    - name: postfix is running
+      service:
+        name: postfix
+        state: started
+    - name: Dovecot is running
+      service:
+        name: dovecot
+        state: started

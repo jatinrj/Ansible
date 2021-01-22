@@ -1,0 +1,2 @@
+kiosk ansible_host=legend-worker01
+kiosk2 ansible_host=legend-master

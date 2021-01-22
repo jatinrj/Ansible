@@ -1,0 +1,10 @@
+---
+- name: abc
+  hosts: legend-worker01
+  tasks:
+    - name: include file
+      include_vars: variables.yml
+    - name: varify
+      debug:
+        msg: >
+         "{{ packages['web_package'] }} and {{ packages.db_package }} have been imported"

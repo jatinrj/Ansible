@@ -1,0 +1,8 @@
+---
+- name: install a package
+  hosts: legend-worker01
+  tasks:
+    - name: install th package
+      yum:
+        name: ['httpd', 'nmap']
+        state: latest

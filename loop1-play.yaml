@@ -1,0 +1,15 @@
+---
+- name: first loop for installing pacakages
+  hosts: all
+  vars:
+    pkg:
+      - vsftpd
+      - chronyd
+      - nmap
+      - httpd
+  tasks:
+    - name: 'installing pacakages'
+      yum:
+        name: "{{ item }}"
+        state: present
+      with_items: "{{ pkg }}"

@@ -1,0 +1,12 @@
+---
+- name: install vsftpd if enough space is on root
+  hosts: all
+  tasks:
+    - name: vsftpdi and httpd
+      yum:
+        name:
+          - vsftpd
+          - httpd
+        state: removed
+      with_items: "{{ ansible_mounts }}"
+      when: item.mount == "/" or item.size_available > 100000000

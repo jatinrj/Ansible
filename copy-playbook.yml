@@ -1,0 +1,11 @@
+---
+- name: copy
+  hosts: all
+  tasks:
+    - name: copy /etc/nginx/
+      copy:
+        src: /etc/nginx/
+        dest: /root/
+        owner: newbie
+        group: newbie
+        mode: 0644

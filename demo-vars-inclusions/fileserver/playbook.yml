@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+    - name: include the variable file
+      include_vars: package.yml
+    - name: include task file
+      include: install_package.yml

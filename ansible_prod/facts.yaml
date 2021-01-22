@@ -1,0 +1,6 @@
+---
+- name: fa
+  hosts: kiosk2
+  tasks:
+    - debug:
+        msg: System {{ ansible_facts.default_ipv4.address }}

@@ -1,0 +1,11 @@
+---
+- name: loop2
+  hosts: all
+  tasks:
+    - name: postfix and dovecot is running
+      service:
+        name: "{{ item }}"
+        state: started
+      with_items:
+        - postfix
+        - dovecot

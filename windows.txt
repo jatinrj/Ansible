@@ -1,0 +1,9 @@
+[win]
+192.168.0.105
+
+[win:vars]
+ansible_user=Deepak
+ansible_password=iron
+ansible_connection=winrm
+ansible_winrm_port=5985
+ansible_winrm_server_cert_validation=ignore

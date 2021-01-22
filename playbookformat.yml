@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+  tasks:
+          - name: update cache
+            apt: update_cache=yes
+          - name: install nginx
+            apt: name=vim state=latest

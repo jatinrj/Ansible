@@ -1,0 +1,9 @@
+---
+- name: firewalld enabled and running
+  hosts: all
+  become: true
+  tasks:
+    - name: firewalld
+      service:
+        name: firewalld
+        state: stopped

@@ -1,0 +1,5 @@
+ansible_hosts: 192.168.118.133
+ansible_user: root
+ansible_ssh_pass: Qwerty2254@
+ansible_connection: ssh
+ansible_port: 22

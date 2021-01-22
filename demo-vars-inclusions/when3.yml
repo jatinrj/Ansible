@@ -1,0 +1,18 @@
+---
+- name: when3
+  hosts: all
+  gather_facts: true
+  vars:
+    my_special_user: devops
+    superusers:
+      - root
+      - devops
+      - toor
+  tasks:
+    - name: task runs if my_special_user is in superusers
+      user:
+        name: "{{ my_special_user }}"
+        groups: wheel
+        append: yes
+        state: present
+      when: my_special_user is in superusers

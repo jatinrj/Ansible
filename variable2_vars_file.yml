@@ -1,0 +1,10 @@
+---
+- name: userfile
+  hosts: legend-worker01, legend-master
+  vars_files:
+    - /home/jatin/Music/hosts_vars_file.yml
+  tasks:
+    - name: user
+      user:
+        name: '{{ user }}'
+        state: absent

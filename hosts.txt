@@ -1,0 +1,10 @@
+[win]
+192.168.1.90
+
+[win:vars]
+ansible_hosts=192.168.1.90
+ansible_user=Nexteon
+ansible_password=Ver1c085
+ansible_connection=winrm
+ansible_port=5986
+ansible_winrm_server_cert_validation=ignore

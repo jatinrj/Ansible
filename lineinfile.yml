@@ -1,0 +1,9 @@
+---
+- name: lineinfile
+  hosts: all
+  tasks:
+    - name: Ensure SELinux is set to enforcing mode
+      lineinfile:
+        path: /root/nginx.conf
+        regexp: '^server_name'
+        line: server_name 

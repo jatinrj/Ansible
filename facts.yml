@@ -1,0 +1,7 @@
+---
+- name: show facts
+  hosts: legend-master
+  tasks: 
+  - name: print facts
+    debug:
+      var: ansible_facts

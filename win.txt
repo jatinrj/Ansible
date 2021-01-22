@@ -1,0 +1,9 @@
+[win]
+192.168.0.102
+
+[win:vars]
+ansible_hosts=192.168.0.102
+ansible_user=deepak
+ansible_password=iron
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore

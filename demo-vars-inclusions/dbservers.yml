@@ -1,0 +1,15 @@
+---
+- name: dbserver
+  hosts: legend-worker01
+  tasks:
+    - name: include file path
+      include_vars: paths.yml
+    - name: create the remote directory
+      file:
+        path: "{{ paths.dbpath }}"
+        mode: 0775
+        state: directory
+      register: result
+    - name: result show
+      debug:
+        var: result
